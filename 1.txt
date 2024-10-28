@@ -1,0 +1,150 @@
+1
+#include <cstdio>
+#include <cmath>
+
+int main() {
+    float height, radius;
+    printf("Введите высоту height и радиус radius: ");
+    scanf("%f %f", &height, &radius);
+
+    float volumeCylinder = M_PI * radius * radius * height;
+    float volumeCone = (1.0f / 3.0f) * M_PI * radius * radius * height;
+
+    printf("Объем цилиндра: %.2f\n", volumeCylinder);
+    printf("Объем конуса: %.2f\n", volumeCone);
+
+    return 0;
+}
+
+2
+#include <cstdio>
+#include <cmath>
+
+int main() {
+    float angleDegrees;
+    printf("Введите угол angleDegrees в градусах: ");
+    scanf("%f", &angleDegrees);
+
+    float radians = angleDegrees * (M_PI / 180.0f);
+
+    printf("Угол в радианах: %.4f\n", radians);
+
+    return 0;
+}
+3
+#include <cstdio>
+#include <cmath>
+
+int main() {
+    float R;
+    printf("Введите R: ");
+    scanf("%f", &R);
+
+    float s1 = 0, s2 = 0, x = 0;
+
+    s1 = (R * R) - (90 * (M_PI * R * R) / 360);
+    s2 = R * R;
+    x = s1 + s2;
+
+    printf("Результат: %.2f\n", x);
+
+    return 0;
+}
+
+4
+
+#include <cstdio>
+#include <cmath>
+
+int main() {
+    float angleDegrees;
+    printf("Введите угол angleDegrees в градусах: ");
+    scanf("%f", &angleDegrees);
+
+    float radians = angleDegrees * (M_PI / 180.0f);
+
+    printf("Угол в радианах: %.4f\n", radians);
+
+    return 0;
+}
+
+5
+#include <iostream>
+
+int main() {
+    float x;
+    std::cout << "Введите число x: ";
+    std::cin >> x;
+
+    float t1 = x * x;
+    float t2 = t1 * x;
+    float t3 = t2 * x;
+
+    float result = 2 * t3 - 4 * t2 + t1 + 3 * x + 2;
+    
+    std::cout << "Результат: " << result << std::endl;
+    return 0;
+}
+
+6
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char expression[4];
+    cout << "Введите выражение типа '6+3': ";
+    cin >> expression;
+
+    int number1 = expression[0] - '0';
+    char operation = expression[1];
+    int number2 = expression[2] - '0';
+
+    float result = 0;
+
+    switch (operation) {
+        case '+':
+            result = number1 + number2;
+            break;
+        case '-':
+            result = number1 - number2;
+            break;
+        case '*':
+            result = number1 * number2;
+            break;
+        case '/':
+            if (number2 != 0) {
+                result = static_cast<float>(number1) / number2;
+            } else {
+                cout << "Ошибка: деление на ноль" << endl;
+                return 1;
+            }
+            break;
+        default:
+            cout << "Ошибка: неизвестная операция" << endl;
+            return 1;
+    }
+    
+    cout << "Результат: " << result << endl;
+    return 0;
+}
+
+7
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    float x1, y1, x2, y2, x3, y3;
+    cout << "Введите координаты вершин A, B и C:" << endl;
+    cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+
+    float dx = x3 - x2;
+    float dy = y3 - y2;
+
+    float x4 = x1 + dx;
+    float y4 = y1 + dy;
+
+    cout << "Координаты четвертой вершины (x4, y4): " << x4 << ", " << y4 << endl;
+    return 0;
+}
