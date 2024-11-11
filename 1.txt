@@ -53,79 +53,57 @@ int main() {
 
 4
 
-#include <cstdio>
+#include <iostream>
 #include <cmath>
 
-int main() {
-    float angleDegrees;
-    printf("Введите угол angleDegrees в градусах: ");
-    scanf("%f", &angleDegrees);
-
-    float radians = angleDegrees * (M_PI / 180.0f);
-
-    printf("Угол в радианах: %.4f\n", radians);
-
-    return 0;
-}
-
-5
-#include <iostream>
+using namespace std;
 
 int main() {
-    float x;
-    std::cout << "Введите число x: ";
-    std::cin >> x;
-
-    float t1 = x * x;
-    float t2 = t1 * x;
-    float t3 = t2 * x;
-
-    float result = 2 * t3 - 4 * t2 + t1 + 3 * x + 2;
     
-    std::cout << "Результат: " << result << std::endl;
+    int n, s, d, e, p;
+    
+     cin >> n;
+    
+    s = n / 100;
+    d = (n / 10) % 10;
+    e = n % 10;
+    p = s * d * e;
+    
+    cout << p;
+    
     return 0;
 }
-
-6
+5
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    char expression[4];
-    cout << "Введите выражение типа '6+3': ";
-    cin >> expression;
-
-    int number1 = expression[0] - '0';
-    char operation = expression[1];
-    int number2 = expression[2] - '0';
-
-    float result = 0;
-
-    switch (operation) {
-        case '+':
-            result = number1 + number2;
-            break;
-        case '-':
-            result = number1 - number2;
-            break;
-        case '*':
-            result = number1 * number2;
-            break;
-        case '/':
-            if (number2 != 0) {
-                result = static_cast<float>(number1) / number2;
-            } else {
-                cout << "Ошибка: деление на ноль" << endl;
-                return 1;
-            }
-            break;
-        default:
-            cout << "Ошибка: неизвестная операция" << endl;
-            return 1;
-    }
+    int x;
+    cin >> x;
     
+    H = ((((2*x-4)*x+1)*x+3)*x+2)
+
+    cout << "Результат: " << H << endl;
+
+    return 0;
+}
+6
+#include <iostream>
+using namespace std;
+
+int main() {
+    char expr[2];
+    cin >> expr;
+
+    int n1 = expr[0] - '0'; 
+    int n2 = expr[2] - '0'; 
+    int result;
+
+    result = n1 + n2;
+
     cout << "Результат: " << result << endl;
+
     return 0;
 }
 
@@ -146,5 +124,41 @@ int main() {
     float y4 = y1 + dy;
 
     cout << "Координаты четвертой вершины (x4, y4): " << x4 << ", " << y4 << endl;
+    return 0;
+}
+
+25.1
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    int x = -b / (2 * a);
+    int y = a * x * x + b * x + c;
+
+    cout << x << ", " << y << endl;
+
+    return 0;
+}
+
+25.2
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    float C;
+    cin >> C;
+
+    float r = C / (2 * M_PI);
+    float A = M_PI * r * r;
+
+    cout << "Площадь круга: " << A << endl;
+
     return 0;
 }
