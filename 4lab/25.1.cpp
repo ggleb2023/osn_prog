@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     
-    int x, y, z;
+    int x, y, z, max, min;
     cin >> x >> y >> z;
     
     if ((x + y * z) > x) min = x + y * z;
@@ -12,6 +12,7 @@ int main() {
 
     if ((x + y - z) > min) max = x + y - z;
     else max = min 
-    cout << res;
+    
+    cout << max;
 
 }
