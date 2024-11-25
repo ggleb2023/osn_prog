@@ -12,7 +12,7 @@ int main() {
     cout << "c & d";
     cin >> c >> d;
     
-    if (((a < c && b < d) || (a < d && b < c)) || ((c < a && d < b) || (c < b && d < a))) {
+    if ((a < c && b < d) || (a < d && b < c)) {
         cout << "you can" << endl;
     } else {
         cout << "you can not" << endl;
