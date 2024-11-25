@@ -3,16 +3,19 @@
 using namespace std;
 
 int main() {
-    
-    int a, c; char b;
+    int a, c;
+    char b;
     cin >> a >> b >> c;
-    
-    int res;
-    res = (b == '+') ? a+c : cout << "vvedite operator";
-    res = (b == '-') ? a-c : cout << "vvedite operator";
-    res = (b == '*') ? a*c : cout << "vvedite operator";
-    res = (b == '/' && (a != 0 || c != 0)) ? a/c : cout << "vvedite operator";
-    
-    cout << res;
 
+    int res;
+    bool op = (b == '+' || b == '-' || b == '*' || (b == '/' && c != 0));
+
+    (b == '+') ? res = a + c : 
+    (b == '-') ? res = a - c : 
+    (b == '*') ? res = a * c : 
+    (b == '/' && c != 0) ? res = a / c : res = 0;
+
+    op ? cout << res : cout << "error zero or write correctly" << endl;
+
+    return 0;
 }
